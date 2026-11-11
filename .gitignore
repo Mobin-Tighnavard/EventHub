@@ -1,0 +1,25 @@
+# Environment Variables
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual Environment
+.venv/
+venv/
+
+# Idea
+.idea/
+
+# Django
+*.log
+db.sqlite3
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Celery Beat
+celerybeat-schedule*
