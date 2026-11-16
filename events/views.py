@@ -21,6 +21,14 @@ from .serializers import (EventSerializer, EventFilterSerializer, TicketTypeSeri
                           OrderCreateSerializer,OrderSerializer)
 from .filters import EventFilter
 
+from drf_spectacular.utils import extend_schema
+
+@extend_schema(    summary='Create a new event',
+    description='Creates an event for the authenticated organizer.',
+    tags=['Events'],
+    request=EventSerializer,
+    responses={201: EventSerializer}
+        )
 
 class EventCreateApiView(CreateAPIView):
     serializer_class = EventSerializer
