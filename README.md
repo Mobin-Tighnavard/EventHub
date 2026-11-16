@@ -15,28 +15,30 @@
 - JWT Authentication
 
 ## Features
+
 ### Authentication & Authorization
 - Custom User Model
 - JWT-based authentication
 - Role-based access control (Organizer and Customer)
 - permission-based API access
-## Event Management
+
+### Event Management
 - Create,update,retrieve and delete events
 - Publish and manage status
 - Organizer Ownership permission
 - Public access to published events
-## Event Filtering
+### Event Filtering
 - Filter events by location, status, and date
 - Search events by title
 - Filter by ticket price range
 - Order events by date or title
 - Paginated event listings
-## Ticket management
+### Ticket management
 - Create and manage ticket type
 - Ticket capacity management
 - Ticket Price Management
 - Prevent capacity reduction below sold or reserved tickets
-## Order & Reservation Management
+### Order & Reservation Management
 - Create ticket reservation
 - Prevent overselling using database transactions and row-level locking
 - Automatic reservation expiration
@@ -44,12 +46,17 @@
 - Simulated payment flow
 - View order history and order details
 
-## Background Tasks
+### Background Tasks
 - Celery workers for asynchronous task execution
 - Celery beat for periodic task scheduling
 - Automatic expiration of pending orders
 
+### Automated Testing
+
+- Implemented API tests using django APITestCase and DRF test client
+
 ## Docker Architecture
+
 ### The application uses Docker Compose to manage its services:
 - Web: Django application and REST API
 - Redis: Celery message broker
